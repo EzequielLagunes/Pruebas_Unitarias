@@ -7,8 +7,17 @@ const palindromo = require('./Palindromo');
 
 //con text, planeo 3 escenarios (pueden ser más)
 
-//1 escenario donde si sea un palindromo
+//1 escenArio donde si sea un palindromo TRUE
+test ("Palindromo", () => {
+    expect(palindromo.palindromo("Ana")).toBe(true);
+} );
 
-//2 escenario donde no ingrese nada
+//2 escenario donde no ingrese nada FALSE
+test ("Elemento vacio", () => {
+    expect(palindromo.palindromo("")).toBe(true);
+} );
 
-//3 escenario donde lo que se ingresa no sea un texto, o peor aú, sea undefined 
+//3 escenario donde lo que se ingresa no sea un texto, o peor aun, sea undefined FALSE
+test ("Elemento undefined", () => {
+    expect(palindromo.palindromo(undefined)).toBe(true);
+} );
